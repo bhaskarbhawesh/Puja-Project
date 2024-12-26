@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            animation: slideIn 1s forwards;
+            flex-wrap: wrap;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Product Image Section */
+        .product-image {
+            width: 45%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Product Details Section */
+        .product-details {
+            width: 50%;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s 0.7s forwards;
+        }
+
+        .product-details h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            animation: slideLeft 1s forwards;
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .product-details p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .buy-button {
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+        }
+
+        .buy-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .product-reviews {
+            margin-top: 40px;
+            animation: fadeIn 1s 1s forwards;
+        }
+
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .review p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .review span {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1rem;
+            animation: fadeIn 1s 1.3s forwards;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-image, .product-details {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .product-details h1 {
+                font-size: 2rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+            }
+
+            .buy-button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-details h1 {
+                font-size: 1.5rem;
+            }
+
+            .product-details p {
+                font-size: 1rem;
+            }
+
+            .price {
+                font-size: 1.5rem;
+            }
+
+            .buy-button {
+                padding: 12px;
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Product Image Section -->
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400" alt="Product Image">
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="product-details">
+            <h1>Product Name</h1>
+            <p>Discover the ultimate experience with our high-quality product. Packed with features, it delivers top-notch performance and sleek design to suit your needs.</p>
+            <p class="price">₹2,999</p>
+
+            <button class="buy-button">Buy Now</button>
+
+            <!-- Customer Reviews Section -->
+            <div class="product-reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review">
+                    <p><span>John Doe</span> - ⭐⭐⭐⭐⭐</p>
+                    <p>"Amazing product! Worth every penny!"</p>
+                </div>
+                <div class="review">
+                    <p><span>Jane Smith</span> - ⭐⭐⭐⭐</p>
+                    <p>"Good quality, but delivery took a bit longer than expected."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Company Name | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zudio India</title>
+    <style>
+        
+        :root {
+            --primary-color: #333;
+            --secondary-color: #000;
+            --accent-color: #f4a261;
+            --light-color: #fff;
+            --dark-color: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: var(--secondary-color);
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: var(--light-color);
+            text-align: center;
+            padding: 2em 1em;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .section {
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 1em;
+            color: var(--primary-color);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        .product {
+            border: 1px solid var(--secondary-color);
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 1em;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="3.png" alt="Logo" class="logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="menu-item">Men</a></li>
+                <li><a href="#" class="menu-item">Women</a></li>
+                <li><a href="#" class="menu-item">Kids</a></li>
+            </ul>
+            <div class="search-cart">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <a href="#" class="cart-icon">🛒</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <img src="1.jpg" alt="Hero Banner" class="hero-banner">
+        </div>
+        <style>
+            .header {
+                background-color: #000000;
+                color: #ffffff;
+                padding: 10px 0;
+                box-shadow: 0 2px 5px rgba(147, 53, 53, 0.1);
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+            }
+            .logo-container img {
+                width: 120px;
+            }
+            .menu {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+            }
+            .menu-item {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .menu-item:hover {
+                color: #007bff;
+                transform: scale(1.1);
+                animation: bounce 0.5s ease;
+            }
+            @keyframes bounce {
+                0%, 100% {
+                    transform: scale(1.1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+            .search-cart {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .search-bar {
+                padding: 8px 15px;
+                border-radius: 20px;
+                border: 2px solid #ccc;
+                transition: all 0.3s ease;
+            }
+            .search-bar:focus {
+                border-color: #007bff;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+            .cart-icon {
+                font-size: 24px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .cart-icon:hover {
+                transform: scale(1.2);
+                color: #007bff;
+            }
+            .hero {
+                position: relative;
+                width: 100%;
+            }
+            .hero-banner {
+                width: 100%;
+                max-height: 520px;
+                object-fit: cover;
+                transition: opacity 0.5s ease;
+            }
+            .hero-banner:hover {
+                opacity: 0.9;
+            }
+        </style>
+    </header>
+    
+    <main>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seasons Hover Effect</title>
+        <style>
+            /* General styling */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f7f7f7;
+                transition: background-color 0.3s ease;
+            }
+    
+            .seasons {
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .seasons h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+    
+            .season-grid {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap; /* Responsive layout */
+            }
+    
+            .season {
+                position: relative;
+                width: 250px;
+                height: 300px;
+                overflow: hidden;
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+    
+            .season:hover {
+                transform: scale(1.05); /* Slight zoom effect */
+            }
+    
+            /* Image styling */
+            .season-content img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+    
+            .season-content:hover img {
+                transform: scale(1.1); /* Slight zoom on hover */
+                opacity: 0.7; /* Dim image on hover */
+            }
+    
+            /* Text styling */
+            .season-content h3 {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                transition: color 0.3s ease;
+            }
+    
+            .season-content:hover h3 {
+                color: #ffcc00; /* Highlight text on hover */
+            }
+    
+            /* Background color changes */
+            .season.spring:hover ~ body {
+                background-color: #a8e6cf; /* Light green for Spring */
+            }
+    
+            .season.summer:hover ~ body {
+                background-color: #ffd3b6; /* Light orange for Summer */
+            }
+    
+            .season.winter:hover ~ body {
+                background-color: #d3e3fc; /* Light blue for Winter */
+            }
+
+            .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        .product {
+            border: 1px solid var(--secondary-color);
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+        
+        
+        </style>
+    </head>
+
+    <section class="section">
+        <h2>Best Sellers</h2>
+        <div class="products">
+            <div class="product">
+                <img src="8.jpg" alt="Product 1">
+                <h3>Raven Ted Sherpa Oversized Hoodie</h3>
+                <p>₹999</p>
+            </div>
+            <div class="product">
+                <img src="5.jpg" alt="Product 2">
+                <h3>Printed T-shirt</h3>
+                <p>₹1,299</p>
+            </div>
+            <div class="product">
+                <img src="7.jpg" alt="Product 3">
+                <h3>Midnight Black Crop Top</h3>
+                <p>₹899</p>
+            </div>
+            <div class="product">
+                <img src="4.jpg" alt="Product 4">
+                <h3>Plump Oversized Hoodie</h3>
+                <p>₹1,599</p>
+            </div>
+        </div>
+
+        <!-- <button>More</button> -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zudio India. All rights reserved.</p>
+    </footer>
+</body>
+</html>

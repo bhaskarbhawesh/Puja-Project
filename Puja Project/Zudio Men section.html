@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zudio India</title>
+    <style>
+        
+        :root {
+            --primary-color: #333;
+            --secondary-color: #000;
+            --accent-color: #f4a261;
+            --light-color: #fff;
+            --dark-color: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: var(--secondary-color);
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: var(--light-color);
+            text-align: center;
+            padding: 2em 1em;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .section {
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 1em;
+            color: var(--primary-color);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        .product {
+            border: 1px solid var(--secondary-color);
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 1em;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="3.png" alt="Logo" class="logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="menu-item">Men</a></li>
+                <li><a href="#" class="menu-item">Women</a></li>
+                <li><a href="#" class="menu-item">Kids</a></li>
+            </ul>
+            <div class="search-cart">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <a href="#" class="cart-icon">🛒</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <img src="1.jpg" alt="Hero Banner" class="hero-banner">
+        </div>
+        <style>
+            .header {
+                background-color: #000000;
+                color: #ffffff;
+                padding: 10px 0;
+                box-shadow: 0 2px 5px rgba(147, 53, 53, 0.1);
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+            }
+            .logo-container img {
+                width: 120px;
+            }
+            .menu {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+            }
+            .menu-item {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .menu-item:hover {
+                color: #007bff;
+                transform: scale(1.1);
+                animation: bounce 0.5s ease;
+            }
+            @keyframes bounce {
+                0%, 100% {
+                    transform: scale(1.1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+            .search-cart {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .search-bar {
+                padding: 8px 15px;
+                border-radius: 20px;
+                border: 2px solid #ccc;
+                transition: all 0.3s ease;
+            }
+            .search-bar:focus {
+                border-color: #007bff;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+            .cart-icon {
+                font-size: 24px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .cart-icon:hover {
+                transform: scale(1.2);
+                color: #007bff;
+            }
+            .hero {
+                position: relative;
+                width: 100%;
+            }
+            .hero-banner {
+                width: 100%;
+                max-height: 520px;
+                object-fit: cover;
+                transition: opacity 0.5s ease;
+            }
+            .hero-banner:hover {
+                opacity: 0.9;
+            }
+        </style>
+    </header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .product-info p {
+            color: #888;
+            margin: 5px 0;
+        }
+
+        .product-info .price {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .product-info button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .product-info button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .product-info h3 {
+                font-size: 1rem;
+            }
+            .product-info p {
+                font-size: 0.9rem;
+            }
+            .product-info button {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Men's Category</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-grid">
+            <!-- Repeating product items -->
+            <!-- You can copy this block 30 times or use JavaScript to generate -->
+            <div class="product">
+                <img src="5.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 1999.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <!-- Repeat the above product block as needed -->
+
+            <!-- Example of 30 products -->
+            <!-- Instead of duplicating manually, generate dynamically if possible -->
+            <div class="product">
+                <img src="4.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 1599.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="7.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 1499.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="8.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 1299.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Add 28 more similar blocks here -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-grid">
+            <!-- Repeating product items -->
+            <!-- You can copy this block 30 times or use JavaScript to generate -->
+            <div class="product">
+                <img src="5.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 1099.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <!-- Repeat the above product block as needed -->
+
+            <!-- Example of 30 products -->
+            <!-- Instead of duplicating manually, generate dynamically if possible -->
+            <div class="product">
+                <img src="4.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 999.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="7.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 998.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="8.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 599.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Add 28 more similar blocks here -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="product-grid">
+            <!-- Repeating product items -->
+            <!-- You can copy this block 30 times or use JavaScript to generate -->
+            <div class="product">
+                <img src="5.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 570.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <!-- Repeat the above product block as needed -->
+
+            <!-- Example of 30 products -->
+            <!-- Instead of duplicating manually, generate dynamically if possible -->
+            <div class="product">
+                <img src="4.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 999.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="7.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 299.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="8.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 999.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Add 28 more similar blocks here -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="product-grid">
+            <!-- Repeating product items -->
+            <!-- You can copy this block 30 times or use JavaScript to generate -->
+            <div class="product">
+                <img src="5.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 998.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <!-- Repeat the above product block as needed -->
+
+            <!-- Example of 30 products -->
+            <!-- Instead of duplicating manually, generate dynamically if possible -->
+            <div class="product">
+                <img src="4.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 999.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="7.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 1199.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="8.jpg" alt="Product Image">
+                <div class="product-info">
+                    <h3>Product Name</h3>
+                    <p>Brand Name</p>
+                    <p class="price">Rs 999.00</p>
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Add 28 more similar blocks here -->
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Men's Store</p>
+    </footer>
+</body>
+</html>

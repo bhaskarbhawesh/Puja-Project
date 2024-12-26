@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zudio India</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, ul, li, a, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(159, 142, 142, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .search-cart {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .search-cart input {
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .cart-icon {
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-image: url('hero-image.jpg'); /* Replace with actual hero image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .season-grid, .product-grid, .featured-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .season, .product, .featured-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .signup-section {
+            margin-bottom: 20px;
+        }
+
+        footer form input {
+            margin: 5px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer form button {
+            padding: 10px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer .social-links {
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .season, .product, .featured-item {
+                width: calc(50% - 20px);
+            }
+
+            .hero {
+                padding: 30px 10px;
+                font-size: 0.9em;
+            }
+
+            footer form input {
+                padding: 8px;
+            }
+
+            footer form button {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-cart {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .season, .product, .featured-item {
+                width: calc(100% - 20px);
+            }
+
+            footer form input,
+            footer form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="3.png" alt="Logo" class="logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="menu-item">Beauty</a></li>
+                <li><a href="#" class="menu-item">Women</a></li>
+                <li><a href="#" class="menu-item">Men</a></li>
+                <li><a href="#" class="menu-item">Kids</a></li>
+            </ul>
+            <div class="search-cart">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <a href="#" class="cart-icon">🛒</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <img src="1.jpg" alt="Hero Banner" class="hero-banner">
+        </div>
+        <style>
+            .header {
+                background-color: #000000;
+                color: #ffffff;
+                padding: 10px 0;
+                box-shadow: 0 2px 5px rgba(147, 53, 53, 0.1);
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+            }
+            .logo-container img {
+                width: 120px;
+            }
+            .menu {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+            }
+            .menu-item {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .menu-item:hover {
+                color: #007bff;
+                transform: scale(1.1);
+                animation: bounce 0.5s ease;
+            }
+            @keyframes bounce {
+                0%, 100% {
+                    transform: scale(1.1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+            .search-cart {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .search-bar {
+                padding: 8px 15px;
+                border-radius: 20px;
+                border: 2px solid #ccc;
+                transition: all 0.3s ease;
+            }
+            .search-bar:focus {
+                border-color: #007bff;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+            .cart-icon {
+                font-size: 24px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .cart-icon:hover {
+                transform: scale(1.2);
+                color: #007bff;
+            }
+            .hero {
+                position: relative;
+                width: 100%;
+            }
+            .hero-banner {
+                width: 100%;
+                max-height: 520px;
+                object-fit: cover;
+                transition: opacity 0.5s ease;
+            }
+            .hero-banner:hover {
+                opacity: 0.9;
+            }
+        </style>
+    </header>
+    
+    <main>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seasons Hover Effect</title>
+        <style>
+            /* General styling */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f7f7f7;
+                transition: background-color 0.3s ease;
+            }
+    
+            .seasons {
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .seasons h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+    
+            .season-grid {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap; /* Responsive layout */
+            }
+    
+            .season {
+                position: relative;
+                width: 250px;
+                height: 300px;
+                overflow: hidden;
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+    
+            .season:hover {
+                transform: scale(1.05); /* Slight zoom effect */
+            }
+    
+            /* Image styling */
+            .season-content img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+    
+            .season-content:hover img {
+                transform: scale(1.1); /* Slight zoom on hover */
+                opacity: 0.7; /* Dim image on hover */
+            }
+    
+            /* Text styling */
+            .season-content h3 {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                transition: color 0.3s ease;
+            }
+    
+            .season-content:hover h3 {
+                color: #ffcc00; /* Highlight text on hover */
+            }
+    
+            /* Background color changes */
+            .season.spring:hover ~ body {
+                background-color: #a8e6cf; /* Light green for Spring */
+            }
+    
+            .season.summer:hover ~ body {
+                background-color: #ffd3b6; /* Light orange for Summer */
+            }
+    
+            .season.winter:hover ~ body {
+                background-color: #d3e3fc; /* Light blue for Winter */
+            }
+        </style>
+    </head>
+    <body>
+        <section class="seasons">
+            <h2>Seasons Collection</h2>
+            <div class="product-carousel">
+                <!-- Add products here -->
+                    <div class="season-grid">
+                            <div class="season-content">
+                                <img src="5.jpg" alt="Spring" class="default-image">
+                            </div>
+                            <div class="season-content">
+                                <img src="6.jpeg" alt="Summer" class="default-image">
+                            </div>
+                            <div class="season-content">
+                                <img src="4.jpg" alt="Winter" class="default-image">
+                            </div>  
+                    </div>
+            </div>
+        </section>
+
+        <section class="best-seller">
+            <h2>Our Best Seller</h2>
+                <div class="season-grid">
+                    <!-- Spring -->
+                    <div class="season spring">
+                        <div class="season-content">
+                            <img src="5.jpg" alt="Spring" class="default-image">
+                            <h3>Rs 1999</h3>
+                        </div>
+                    </div>
+                    <!-- Summer -->
+                    <div class="season summer">
+                        <div class="season-content">
+                            <img src="6.jpeg" alt="Summer" class="default-image">
+                            <h3>Rs 1999</h3>
+                        </div>
+                    </div>
+                    <!-- Winter -->
+                    <div class="season winter">
+                        <div class="season-content">
+                            <img src="4.jpg" alt="Winter" class="default-image">
+                            <h3>Rs 1999</h3>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="discount-banner">
+            <h2>Get 50% Off</h2>
+            <button>Shop Now</button>
+        </section>
+
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Add product categories -->
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Our Featured Collections</h2>
+            <div class="featured-grid">
+                <!-- Featured products go here -->
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What They Said</h2>
+            <div class="testimonials-carousel">
+                <!-- Add testimonials here -->
+            </div>
+        </section>
+    </main>
+
+
+
+    
+
+    <footer>
+        <div class="signup-section">
+            <h2>Get More Benefits by Joining the Community!</h2>
+            <form>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2024 Zudio India. All rights reserved.</p>
+            <div class="social-links">
+                <!-- Add social media links -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
